@@ -11,7 +11,7 @@ CORS(app, resources={r"/order": {"origins": "*"}, r"/get_menu": {"origins": "*"}
 
 # Firebase Admin SDK
 
-cred = credentials.Certificate("/home/net123/mysite/canteeno-6136-firebase-adminsdk-vqhdg-75f15bcdbb.json")
+cred = credentials.Certificate("canteeno-6136-firebase-adminsdk-vqhdg-75f15bcdbb.json")
 firebase_admin.initialize_app(cred)
 db = firestore.client()
 
