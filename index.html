@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Canteeno</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-firestore.js"></script>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">Canteeno.</div>
+            <ul class="nav-links">
+                <li><a href="#home" class="navbar-link">Home</a></li>
+                <li><a href="#specials" class="navbar-link">Specials</a></li>
+                <li><a href="#menu" class="navbar-link">Menu</a></li>
+                <li><a href="#cart" class="navbar-link">Cart</a></li>
+                <li><a href="about.html" class="navbar-link">About Us</a></li>
+            </ul>
+            <a href="http://192.168.29.35:8080/" class="btn">Admin</a>
+        </nav>
+    </header>
+     
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <h1>Craving a bite?</h1>
+            <h2>Let us bring the VESIT Canteen to you!</h2>
+            <p>Why wait? Satisfy your hunger with a quick online order!</p>
+            <a href="#" class="btn">Lets Eat</a>
+        </div>
+        <div class="burger-image">
+            <img src="https://firebasestorage.googleapis.com/v0/b/canteeno-6136.appspot.com/o/images%2Fcta-banner.png?alt=media&token=6ddf2dc8-0c79-4ce5-8a0a-db92eb668536" alt="Delicious Burger">
+        </div>
+    </section>
+
+    <div id="specials"><h1 style="text-align: center;">Today's Special!!!</h1></div>
+    <section class="menu-section">
+        <div class="menu-item">
+            <div class="menu-icon">
+                <img src="https://firebasestorage.googleapis.com/v0/b/canteeno-6136.appspot.com/o/images%2Fpromo-icon-1.svg?alt=media&token=d8b257e1-009f-408c-b65b-0b9c84735c90" alt="Pizza Icon">
+            </div>
+            <h3>Pizza</h3>
+            <p>A slice of heaven in every bite!</p>
+            <div class="menu-image">
+                <!-- <img src="https://firebasestorage.googleapis.com/v0/b/canteeno-6136.appspot.com/o/images%2Ffood-menu-1.png?alt=media&token=8eca2017-6498-420b-b24a-fa24d9f2c986" alt="Mexican Pizza"> -->
+                <img src="https://firebasestorage.googleapis.com/v0/b/canteeno-6136.appspot.com/o/images%2Ftop-view-pizza-with-ai-generated-free-png.png?alt=media&token=63539c52-ad4c-4729-8203-6200c5fd18cb">
+            </div>
+        </div>
+        <div class="menu-item">
+            <div class="menu-icon">
+                <img src="https://firebasestorage.googleapis.com/v0/b/canteeno-6136.appspot.com/o/images%2Fpromo-icon-2.svg?alt=media&token=3d3b16c1-32db-483f-bcd5-bdfac866be14" alt="Drinks Icon">
+            </div>
+            <h3>Soft Drinks</h3>
+            <p>Refreshment that hits the spot!</p>
+            <div class="menu-image">
+                <img src="https://firebasestorage.googleapis.com/v0/b/canteeno-6136.appspot.com/o/images%2Fmojito-summer-refreshing-cocktail-with-ice-and-mint-perfect-for-drink-catalog-ai-generated-png.png?alt=media&token=385bcfa3-91f5-41c0-80e0-01ccf418a26b">
+                <!-- <img src="https://firebasestorage.googleapis.com/v0/b/canteeno-6136.appspot.com/o/images%2Ffood-menu-2.png?alt=media&token=6838c4a2-f751-4777-b8eb-18d34930babe" alt="Soft Drinks"> -->
+            </div>
+        </div>
+        <div class="menu-item">
+            <div class="menu-icon">
+                <img src="https://firebasestorage.googleapis.com/v0/b/canteeno-6136.appspot.com/o/images%2Fpromo-icon-3.svg?alt=media&token=1e7a3123-2260-478c-ab99-ee37bd00075c" alt="Fries Icon">
+            </div>
+            <h3>French Fry</h3>
+            <p>Crispy, golden, and irresistibly good!</p>
+            <div class="menu-image">
+                <img src="https://firebasestorage.googleapis.com/v0/b/canteeno-6136.appspot.com/o/images%2Ffrench-fries-isolated-on-background-with-generative-ai-png.png?alt=media&token=975664e1-0d4f-47d4-9189-bfe52e29810f" alt="">
+                <!-- <img src="https://firebasestorage.googleapis.com/v0/b/canteeno-6136.appspot.com/o/images%2Ffood-menu-3.png?alt=media&token=7cb03061-3218-4e74-acaa-afb0a25d28b2" alt="French Fry"> -->
+            </div>
+        </div>
+        <div class="menu-item">
+            <div class="menu-icon">
+                <img src="https://firebasestorage.googleapis.com/v0/b/canteeno-6136.appspot.com/o/images%2Fpromo-icon-4.svg?alt=media&token=c4a35af5-495f-49a5-aa75-b8bc524d0a06" alt="Burger Icon">
+            </div>
+            <h3>Burger Kingo</h3>
+            <p>Juicy, loaded, and made to satisfy!</p>
+            <div class="menu-image">
+                <img src="https://firebasestorage.googleapis.com/v0/b/canteeno-6136.appspot.com/o/images%2Fhero-banner.png?alt=media&token=5a82512c-fc42-4437-9e9b-1ce239f50f21" alt="Burger Kingo">
+            </div>
+        </div>
+    </section>
+<!-- ok -->
+
+    <!-- Menu Section -->
+    <div id="menu"><h1 style="text-align: center;">Our Menu</h1></div>
+    <section class="products-section">
+        <div id="menu-container" class="product-grid">
+            <!-- Dynamic content will be injected here -->
+        </div>
+    </section>
+
+    <!-- Cart Section remains the same -->
+    <section class="cart-section" id="cart">
+        <div class="container">
+            <h2 class="section-title">Your Cart</h2>
+            <div class="cart-items">
+                <table class="cart-table">
+                    <thead>
+                        <tr>
+                            <th>Product</th>
+                            <th>Quantity</th>
+                            <th>Price</th>
+                            <th>Total</th>
+                            <th>Action</th> <!-- Add an action column for remove button -->
+                        </tr>
+                    </thead>
+                    <tbody id="cart-body"></tbody>
+                    <tfoot>
+                        <tr>
+                            <td colspan="3" class="total-label">Total</td>
+                            <td id="cart-total">$0.00</td>
+                            <td></td>
+                        </tr>
+                    </tfoot>
+                </table>
+            </div>
+            <div class="cart-actions">
+                <button class="proceed-checkout" onclick="proceed_to_order()">Proceed to Checkout</button>
+            </div>
+        </div>
+    </section><!-- ok -->
+    <script>
+  async function fetchMenu() {
+        const response = await fetch('https://net123.pythonanywhere.com/get_menu');
+        const menuItems = await response.json();
+        const menuContainer = document.getElementById('menu-container');
+        menuItems.forEach(item => {
+            const productCard = `
+                <div class="product-card">
+                    <img src="${item.image}" alt="${item.name}">
+                    <div class="product-info">
+                        <p class="category">${item.category}</p>
+                        <h4>${item.name}</h4>
+                        <p class="price">PRICE: <span class="new-price">$${item.price}</span></p>
+                        <button class="order-button" data-id="${item.id}" data-name="${item.name}" data-price="${item.price}">Order Now</button>
+                    </div>
+                </div>
+            `;
+            menuContainer.insertAdjacentHTML('beforeend', productCard);
+        });
+    }
+
+    fetchMenu();
+
+    var itemList = [];
+
+    // Add item to cart
+    document.body.addEventListener('click', (event) => {
+        if (event.target.classList.contains('order-button')) {
+            const productId = event.target.dataset.id;
+            const productItem = event.target.dataset.name;
+            const productPrice = parseFloat(event.target.dataset.price);
+
+            // Check if item is already in cart, if yes, increase quantity
+            let existingItem = itemList.find(item => item.productId === productId);
+            if (existingItem) {
+                existingItem.quantity++;
+            } else {
+                let ordered_item = {
+                    productId: productId,
+                    name: productItem,
+                    price: productPrice,
+                    quantity: 1
+                };
+                itemList.push(ordered_item);
+            }
+
+            updateCart();
+        }
+    });
+
+    // Remove item from cart
+    function removeFromCart(productId) {
+        itemList = itemList.filter(item => item.productId !== productId);
+        updateCart();
+    }
+
+    // Update cart table
+    function updateCart() {
+        const cartBody = document.getElementById('cart-body');
+        const cartTotal = document.getElementById('cart-total');
+        cartBody.innerHTML = ''; // Clear the cart
+
+        let totalAmount = 0;
+
+        itemList.forEach(item => {
+            const totalPrice = item.quantity * item.price;
+            totalAmount += totalPrice;
+
+            const cartRow = `
+                <tr>
+                    <td>${item.name}</td>
+                    <td>${item.quantity}</td>
+                    <td>$${item.price.toFixed(2)}</td>
+                    <td>$${totalPrice.toFixed(2)}</td>
+                    <td><button onclick="removeFromCart('${item.productId}')">Remove</button></td>
+                </tr>
+            `;
+            cartBody.insertAdjacentHTML('beforeend', cartRow);
+        });
+
+        // Update total price
+        cartTotal.textContent = `$${totalAmount.toFixed(2)}`;
+    }
+
+    // Proceed to order
+    // Calculate the total price of all items
+    function calculateTotal() {
+        return itemList.reduce((acc, item) => acc + (item.quantity * item.price), 0);
+    }
+
+    // Proceed to order function
+    async function proceed_to_order() {
+        if (itemList.length === 0) {
+            alert('Your cart is empty!');
+            return;
+        }
+
+        const orderData = {
+            items: itemList,
+            total: calculateTotal(),
+        };
+
+        console.log(orderData);
+
+        try {
+            const response = await fetch('https://net123.pythonanywhere.com/order', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(orderData),
+            });
+
+            const result = await response.json();
+            if (response.ok) {
+                alert(`Order placed successfully: ${result.status}`);
+                // Clear cart after successful order
+                itemList = [];
+                updateCart();
+            } else {
+                alert(`Error: ${result.error}`);
+            }
+        } catch (error) {
+            alert('Error placing order. Please try again later.');
+        }
+    }
+    </script>
+</body>
+</html>
